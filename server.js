@@ -39,3 +39,5 @@ dataservice.initialize().then(() => {
 }).catch (() => {
     console.log('promises not stisfied');
 });
+
+app.listen(8080);
