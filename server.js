@@ -13,7 +13,22 @@ app.get("/", function(req, res){
     resText += "I acknowledge the College's academic integrity policy - and my own integrity - remain in effect whether my work is done remotely or onsite. Any test or assingnment is in act of trust between me and my instructor, and specially with my classmates... even when no one is watching. I Declare I will not break that trust.<br><br>"; 
     resText += "Name: Sandeep Digpal<br><br>";
     resText += "Student Number: 126454214<br><br>";
-    
+})
+
+app.get("Click to visit CPA Students",(req,res)=>{
+    dataservice.getCpa().then((data) =>{
+        res.json({data});
+    }).catch((err)=>{
+        res.json({message: err});
+    })
+})
+
+app.get("Click to see who has the highest GPA",(req,res)=>{
+    dataservice.getHighGpa().then((data) =>{
+        res.json({data});
+    }).catch((err)=>{
+        res.json({message: err});
+    })
 })
 
 app.use((req, res)=>{
