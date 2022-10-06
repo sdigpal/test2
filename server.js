@@ -15,7 +15,7 @@ app.get("/", function(req, res){
     resText += "Student Number: 126454214<br><br>";
 })
 
-app.get("Click to visit CPA Students",(req,res)=>{
+app.get("/Click to visit CPA Students",(req,res)=>{
     dataservice.getCpa().then((data) =>{
         res.json({data});
     }).catch((err)=>{
@@ -23,7 +23,7 @@ app.get("Click to visit CPA Students",(req,res)=>{
     })
 })
 
-app.get("Click to see who has the highest GPA",(req,res)=>{
+app.get("/Click to see who has the highest GPA",(req,res)=>{
     dataservice.getHighGpa().then((data) =>{
         res.json({data});
     }).catch((err)=>{
