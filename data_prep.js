@@ -29,7 +29,7 @@ exports.getCpa = () => {
 exports.getHighGpa = () => {
     return new Promise ((resolve, reject) => {
         var highGPA = students.filter(gpa => gpa.is4 == true);
-        if (highGPA.length == 0) {
+        if (highGPA == 0) {
             reject('unable to fetch data');
         }
         resolve(highGPA);
